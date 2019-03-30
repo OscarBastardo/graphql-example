@@ -1,0 +1,44 @@
+{
+  "name": "graphql-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Oscar Bastardo <osalbr.14@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint src/**/*.ts",
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/bin/index.ts --watch src",
+    "test": "jest --watch",
+    "coverage": "jest --coverage",
+    "build": "rimraf dist && tsc && ef-tspm",
+    "start": "node dist/bin/index.js"
+  },
+  "devDependencies": {
+    "@ef-carbon/tspm": "^2.2.5",
+    "@types/dotenv": "^6.1.0",
+    "@types/jest": "^24.0.11",
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.40",
+    "@types/node": "^11.11.3",
+    "@types/supertest": "^2.0.7",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10",
+    "rimraf": "^2.6.3",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.3",
+    "tsconfig-paths": "^3.8.0",
+    "tsconfig-paths-jest": "^0.0.1",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@types/graphql": "^14.2.0",
+    "@types/koa-mount": "^3.0.1",
+    "dotenv": "^7.0.0",
+    "graphql": "^14.2.0",
+    "koa": "^2.7.0",
+    "koa-graphql": "^0.8.0",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^7.4.0"
+  }
+}
