@@ -7,9 +7,9 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "routes/*": [ "src/routes/*" ],
       "test/*": [ "src/test/*" ],
-      "typings/*": [ "src/typings/*" ]
+      "typings/*": [ "src/typings/*" ],
+      "schema/*": [ "src/schema/*" ]
     }
   },
   "include": [

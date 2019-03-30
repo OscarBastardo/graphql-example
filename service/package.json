@@ -15,9 +15,12 @@
   "devDependencies": {
     "@ef-carbon/tspm": "^2.2.5",
     "@types/dotenv": "^6.1.0",
+    "@types/graphql": "^14.2.0",
     "@types/jest": "^24.0.11",
     "@types/koa": "^2.0.48",
+    "@types/koa-mount": "^3.0.1",
     "@types/koa-router": "^7.0.40",
+    "@types/lodash": "^4.14.123",
     "@types/node": "^11.11.3",
     "@types/supertest": "^2.0.7",
     "jest": "^24.5.0",
@@ -32,13 +35,12 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "@types/graphql": "^14.2.0",
-    "@types/koa-mount": "^3.0.1",
     "dotenv": "^7.0.0",
     "graphql": "^14.2.0",
     "koa": "^2.7.0",
     "koa-graphql": "^0.8.0",
     "koa-mount": "^4.0.0",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.11"
   }
 }
