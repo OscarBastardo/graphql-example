@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLSchema, GraphQLID } from 'graphql';
+import { GraphQLObjectType, GraphQLSchema, GraphQLID, GraphQLList } from 'graphql';
 import { find } from 'lodash';
 import BookType from './Book';
 import AuthorType from './Author';
@@ -31,6 +31,18 @@ const RootQuery = new GraphQLObjectType({
       resolve(parent, args) {
         // code to get data from db / other source
         return find(authors, { id: args.id })
+      }
+    },
+    books: {
+      type: new GraphQLList(BookType),
+      resolve(parents, args) {
+        return books;
+      }
+    },
+    authors: {
+      type: new GraphQLList(AuthorType),
+      resolve(parents, args) {
+        return authors;
       }
     }
   },
