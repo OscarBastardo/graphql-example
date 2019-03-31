@@ -1,6 +1,7 @@
 import * as Koa from 'koa';
 import * as mount from 'koa-mount';
-const graphqlHTTP = require('koa-graphql');
+import * as graphqlHTTP from 'koa-graphql';
+
 import schema from '../schema';
 
 function createServer() {
@@ -8,7 +9,7 @@ function createServer() {
 
   server.use(mount('/graphql', graphqlHTTP({
     schema,
-    graphiql: true
+    graphiql: true,
   })));
 
   return server;

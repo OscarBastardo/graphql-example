@@ -10,7 +10,7 @@ mongoose.connect(dbUri, { useNewUrlParser: true});
 mongoose.connection.once('open', () => {
   // tslint:disable-next-line: no-console
   console.log('connected to database');
-})
+});
 
 const PORT = process.env.PORT || 4000;
 const server = createServer();
