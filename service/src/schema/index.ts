@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLString, GraphQLSchema } from 'graphql';
+import { GraphQLObjectType, GraphQLSchema, GraphQLID } from 'graphql';
 import { find } from 'lodash';
 import BookType from './Book';
 
@@ -11,7 +11,7 @@ const RootQuery = new GraphQLObjectType({
       type: BookType,
       args: {
         id: { 
-          type: GraphQLString
+          type: GraphQLID
         }
       },
       resolve(parent, args) {
