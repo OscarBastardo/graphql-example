@@ -1,4 +1,12 @@
-import { GraphQLObjectType, GraphQLSchema, GraphQLID, GraphQLList, GraphQLString, GraphQLInt } from 'graphql';
+import {
+  GraphQLObjectType,
+  GraphQLSchema,
+  GraphQLID,
+  GraphQLList,
+  GraphQLString,
+  GraphQLInt,
+  GraphQLNonNull,
+} from 'graphql';
 import Book from '../models/Book';
 import Author from '../models/Author';
 
@@ -81,10 +89,10 @@ const Mutation = new GraphQLObjectType({
       type: AuthorType,
       args: {
         name: {
-          type: GraphQLString,
+          type: GraphQLNonNull(GraphQLString),
         },
         age: {
-          type: GraphQLInt,
+          type: GraphQLNonNull(GraphQLInt),
         },
       },
       resolve(parent, args) {
